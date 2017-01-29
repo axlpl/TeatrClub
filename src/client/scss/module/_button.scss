@@ -1,0 +1,33 @@
+.button {
+    border-radius: 0.3rem;
+    border: 0;
+    transition: background .2s ease-in;
+    cursor: pointer;
+    font-size: 1.4rem;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba($color-shadow, 0.4);
+    padding: 1rem 2rem;
+    outline: none;
+    text-decoration: none;
+
+    &--small {
+        padding: 0.5rem 1rem;
+    }
+
+    &--primary {
+        background: $color-primary;
+        color: $color-btn-text;
+
+        &:hover {
+            background: $color-primary-hover;
+        }
+    }
+
+    &--secondary {
+        background: $color-secondary;
+        color: $color-btn-text;
+
+        &:hover {
+            background: $color-secondary-hover;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<div class="page__section">
+    <h2 class="page__title">Wez wejsciowke</h2>
+</div>
+<div ng-show="Tickets.showLoginInfo">
+  Aby odebrać darmową wejściówkę należy się zalogować!
+</div>
+
+<div ng-show="Tickets.showLikeDialog">
+  Aby odebrać darmową wejściówkę lubić nasz fanpage
+  <div class="fb-like" data-href="https://www.facebook.com/TeatrClub/" data-layout="button_count" data-action="like" data-show-faces="true"></div>
+</div>
+
+<form name="TicketsForm" 
+	id="TicketsForm" 
+	ng-submit="Tickets.getFreeTicket(TicketsForm.$valid)" 
+	ng-show="Tickets.canObtainFreeTicket && !Tickets.hasObtainFreeTicket"
+	novalidate>
+    <div class="field__wrapper"
+    	ng-class="{ 'field__wrapper--error': Tickets.hasError('name', TicketsForm, Tickets.hasClickedOnSubmit) }">
+        <label class="field__label" for="name">
+        	<img ng-src="http://graph.facebook.com/{{ Tickets.model.id }}/picture" />
+        	Imie i nazwisko:
+            <span class="field__valid">(This field is required)</span>
+        </label>
+        <input type="text"
+               class="field__input"
+               id="name"
+               name="name"
+               required
+               ng-model="Tickets.model.name" />
+    </div>
+    <div class="field__wrapper" 
+    	ng-class="{ 'field__wrapper--error': Tickets.hasError('email', TicketsForm, Tickets.hasClickedOnSubmit) }">
+        <label class="field__label" for="email">
+            Mail:
+            <span class="field__valid">(This field is required and should be in email format)</span>
+        </label>
+        <input type="email"
+               class="field__input"
+               id="email"
+               name="email"
+               required
+               ng-model="Tickets.model.email" />
+    </div>
+    <div class="field__wrapper field__wrapper--buttons">
+        <button type="submit"
+                class="button button--primary">
+            Save
+        </button>
+    </div>
+</form>
+<image-from-svg ng-model="Tickets.ticketQR"></image-from-svg>
+
+    <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+

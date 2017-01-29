@@ -1,0 +1,27 @@
+.main__footer {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.main__url {
+    padding: 6px 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+    	background: #000;
+    }
+}
+
+.main__countdown {
+    opacity: 0.8;
+    top: calc(50% + 160px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    font-weight: bold;
+}

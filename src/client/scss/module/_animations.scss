@@ -1,0 +1,33 @@
+@keyframes showIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: inline-block;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes messagesAnim {
+    0% {
+        top: -10rem;
+    }
+    15% {
+        top: 2rem;
+    }
+    75% {
+        top: 2rem;
+        opacity: 1
+    }
+    90% {
+        top: 2rem;
+        opacity: 0;
+    }
+    100% {
+        top: -10rem;
+        opacity: 0;
+    }
+}

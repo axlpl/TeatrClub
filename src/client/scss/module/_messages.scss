@@ -1,0 +1,8 @@
+.messages {
+    position: absolute;
+    top: -100rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: messagesAnim 5s forwards linear;
+    color: $color-message;
+}

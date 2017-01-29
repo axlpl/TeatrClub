@@ -1,0 +1,10 @@
+.link {
+    text-decoration: none;
+    color: $color-text;
+    display: block;
+    font-size: 1.4rem;
+
+    &:hover {
+        color: $color-primary;
+    }
+}
